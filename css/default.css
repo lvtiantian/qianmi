@@ -259,8 +259,9 @@ a{
     text-align: left;
     border-left:1px solid #ddd;
     padding:0 20px;
+    display: none;
 }
-#main .inline ul li.active {
+#main .inline ul li.active>div>div:nth-child(2){
     display: block;
 }
 #main .inline ul li.active {
@@ -269,9 +270,8 @@ a{
 #main .inline ul li>div{
     overflow: hidden;
 }
-
 #main .inline ul li>div>div:nth-child(2) h5,#main .inline ul li>div>div:nth-child(2) p{
-    margin:5px 0;
+    margin:4px 0;
     text-align: left;
     font-size: 14px;
 }
@@ -295,6 +295,15 @@ a{
     background: url(../img/20132248iqr5.png);
     margin:40px auto;
 }
+#main .inline ul.show li:nth-child(2) span{
+    background: url(../img/20132310dsi6.png);
+}
+#main .inline ul.show li:nth-child(3) span{
+    background: url(../img/201323231evc.png);
+}
+#main .inline ul.show li:nth-child(4) span{
+    background: url(../img/2013225999az.png);
+}
 #main .inline ul.show li button{
     width:120px;
     height:37px;
@@ -302,10 +311,10 @@ a{
     color: #fff;
     font-size: 14px;
     margin: 10px 0;
-    display: none;
+    opacity: 0;
 }
 #main .inline ul.show li.active button{
-    display:inline-block;
+    opacity:1;
 }
 #main .inline ul li h3{
     color:#222;

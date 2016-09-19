@@ -130,11 +130,33 @@ setInterval(function(){
         arr=[];
     }
 },500);
-$("#main .inline ul.show li").mouseover(function(){
-    if(!$(this).hasClass('active')){
+$("#main .inline ul.show li").mouseover(function(e){
+    var target= e.target;
 
+    if(!$(this).hasClass('active')&&target.nodeName=="LI"){
+        var len=$("#main .inline ul.show li.current").length;
+        if(len==0){
+            $("#main .inline ul.show li.active>div").children("div:nth-child(2)").hide();
+            $("#main .inline ul.show li.active>p:last-child button").animate({
+                opacity:"0"
+            },500);
+            $("#main .inline ul.show li.active").addClass("current").animate({
+                width:"260px"
+            },500,function(){
+                $(this).removeClass('active');
+                $(this).removeClass('current');
+            })
+            $(this).animate({
+                width:"520px"
+            },500,function(){
+                $(this).addClass('active');
+                $(this).children("div").children("div:nth-child(2)").show();
+            })
+            $(this).children("p:last-child").children("button").animate({
+                opacity:'1'
+            },500)
+        }
     }
-
 })
 
 
