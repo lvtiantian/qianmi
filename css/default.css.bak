@@ -1,0 +1,221 @@
+body{
+
+}
+body,html,h1,h2,h3,h4,h5,h6,p,ul,li,ol,img,button{
+    padding:0;
+    margin:0;
+    list-style: none;
+    vertical-align: bottom;
+    font-family: "微软雅黑", "黑体";
+    outline: none;
+}
+a{
+    text-decoration: none;
+}
+.lf{
+    float:left;
+}
+.rt{
+    float:right;
+}
+.clear{
+    clear: both;
+}
+#header{
+    width:100%;
+    line-height: 20px;
+    overflow: hidden;
+    color:#fff;
+    position: fixed;
+    left:0;
+    top:0;
+    z-index: 10;
+}
+/*#header .container{*/
+    /*width:90%;*/
+    /*margin:0 auto;*/
+    /*font-size: 12px;*/
+    /*overflow: hidden;*/
+    /*padding: 0;*/
+/*}*/
+#header .header-top{
+    background: rgba(0,0,0,0.2);
+    color: #bbb;
+}
+#header .header-top a{
+    color: #bbb;
+}
+#header .header-top.active{
+    background: #eee;
+}
+#header .header-bottom.active{
+    background: #fff;
+}
+#header .header-bottom.active a{
+    color: #666;
+}
+#header p{
+    float:left;
+    line-height: 25px;
+}
+#header p a{
+    color:#fff;
+}
+#header p:last-child{
+    float:right;
+}
+#header .logo{
+    float:left;
+}
+#header .logo img{
+    margin:12px 0;
+    height:50px;
+}
+.header-bottom{
+    overflow:hidden;
+}
+.header-bottom ul{
+    float: right;
+}
+.header-bottom li{
+    float:left;
+    line-height: 70px;
+}
+.header-bottom li a{
+    font-size: 16px;
+    margin:5px 15px;
+    color: #fff;
+}
+.header-bottom li a:hover{
+    color:#f8b600;
+    text-decoration: none;
+}
+.header-bottom button{
+    float: right;
+    width:84px;
+    height:30px;
+    margin-top:20px;
+    margin-left:5px;
+}
+.header-bottom button.btn-warning{
+    background-color: transparent;
+    border:1px solid #f8b600;
+    box-shadow: none;
+    color:#f8b600
+}
+.header-bottom .btn-warning.active{
+     background:#f8b600;
+     border:1px solid #f8b600;
+     background-color:#f8b600;
+     color: #fff;
+ }
+.slide{
+    position: relative;
+}
+#banner .slide span{
+    position: absolute;
+    width:68px;
+    height:68px;
+    top:50%;
+    margin-top:-34px;
+    background: url(../img/toleft.png);
+    transform: translateX(-50%);
+    display: none;
+}
+/*#banner .item img{*/
+    /*height: 100%;*/
+/*}*/
+#banner .slide span.right{
+    /*left:0px;*/
+    transform: translateX(-50%);
+    background: url(../img/toright.png);
+}
+.carousel-control.right,.carousel-control.left{
+    background: none;
+}
+.navbar-toggle{
+    border:1px solid #fff;
+    background: #f8b600;
+}
+.navbar-toggle .icon-bar{
+    background: #fff;
+}
+
+#main{
+    height:800px;
+    margin-top:50px;
+}
+#main .container p{
+    border:1px solid #ddd;
+    width:300px ;
+    margin:10px auto;
+    position: relative;
+}
+#main .container p span{
+    position: absolute;
+    width:80px;
+    height:4px;
+    background: #f8b600;
+    left:50%;
+    top:50%;
+    margin-left: -40px;
+    margin-top: -2px;
+}
+#main .container h4{
+    font-size: 20px;
+    color:#888;
+    margin:25px 0;
+}
+#main .container .row button{
+    width:175px;
+    height:40px;
+    background:#eee;
+    border:0;
+    color: #888;
+    font-size: 16px;
+    box-shadow: none;
+    margin-bottom: 50px;
+}
+#main .container .row button:hover,#main .container .row button.active{
+    background:#f8b600 ;
+    border:0;
+    color: #fff;
+}
+#main .container .solution .col-md-3{
+    overflow: hidden;
+}
+#main .container .row img{
+    width: 100%;
+    position: relative;
+    top:0px;
+    transition: top 0.3s;
+}
+#main .container .row span{
+    position:absolute ;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+    padding:15px;
+    margin-right:15px;
+    color:#ddd;
+    font-size: 12px;
+	border-bottom-left-radius:5px;
+	border-bottom-right-radius:5px;
+    display: none;
+}
+#main .container .row img:hover{
+    position: relative;
+    top:-20px;
+}
+#main .container .row.other .btn{
+    margin:50px 0;
+    width: 300px;
+    height:60px;
+    font-size: 20px;
+    background: #fff;
+    border:2px solid #f8b600;
+    color:#f8b600;
+}
+#main .container .row.other .btn:hover{
+    background: #f8b600;
+    color:#fff;
+}
