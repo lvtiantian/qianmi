@@ -264,9 +264,6 @@ a{
 #main .inline ul li.active>div>div:nth-child(2){
     display: block;
 }
-#main .inline ul li.active {
-    margin-bottom: 15px;
-}
 #main .inline ul li>div{
     overflow: hidden;
 }

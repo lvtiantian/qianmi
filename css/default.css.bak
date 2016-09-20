@@ -24,7 +24,6 @@ a{
 #header{
     width:100%;
     line-height: 20px;
-    overflow: hidden;
     color:#fff;
     position: fixed;
     left:0;
@@ -54,14 +53,11 @@ a{
 #header .header-bottom.active a{
     color: #666;
 }
-#header p{
+#header .header-top p{
     float:left;
     line-height: 25px;
 }
-#header p a{
-    color:#fff;
-}
-#header p:last-child{
+#header .header-top p:last-child{
     float:right;
 }
 #header .logo{
@@ -74,10 +70,10 @@ a{
 .header-bottom{
     overflow:hidden;
 }
-.header-bottom ul{
+.header-bottom>div>ul{
     float: right;
 }
-.header-bottom li{
+.header-bottom>div>ul>li{
     float:left;
     line-height: 70px;
 }
@@ -103,12 +99,40 @@ a{
     box-shadow: none;
     color:#f8b600
 }
-.header-bottom .btn-warning.active{
+.header-bottom .btn-warning:hover,.header-bottom .btn-warning.active{
      background:#f8b600;
      border:1px solid #f8b600;
      background-color:#f8b600;
      color: #fff;
  }
+#mycollapse .list:hover a{
+    color:#f8b600;
+    text-decoration: none;
+}
+#mycollapse .list:hover ul{
+    /*position: relative;*/
+    display: block;
+}
+#mycollapse .list ul{
+    width:80%;
+    position: absolute;
+    left:10%;
+    margin:0 auto;
+    z-index: 20;
+    background: rgba(0,0,0,0.8);
+    padding:20px;
+    display: none;
+}
+#mycollapse .list ul li{
+    padding-right:60px;
+    padding-left:60px;
+}
+#mycollapse .list ul li h5{
+    line-height: 35px;
+}
+#mycollapse .list ul li p{
+    line-height: 20px;
+}
 .slide{
     position: relative;
 }
@@ -120,6 +144,7 @@ a{
     margin-top:-34px;
     background: url(../img/toleft.png);
     transform: translateX(-50%);
+    cursor: pointer;
     display: none;
 }
 /*#banner .item img{*/
@@ -142,16 +167,23 @@ a{
 }
 
 #main{
-    height:800px;
-    margin-top:50px;
+    overflow: hidden;
 }
-#main .container p{
+#main .container{
+    width:100%;
+    padding:0;
+}
+#main .container .row{
+    width:60%;
+    margin:0 auto;
+}
+#main .container p.hr{
     border:1px solid #ddd;
     width:300px ;
     margin:10px auto;
     position: relative;
 }
-#main .container p span{
+#main .container p.hr span{
     position: absolute;
     width:80px;
     height:4px;
@@ -160,6 +192,9 @@ a{
     top:50%;
     margin-left: -40px;
     margin-top: -2px;
+}
+#main .container h2{
+    margin-top:50px;
 }
 #main .container h4{
     font-size: 20px;
@@ -181,16 +216,121 @@ a{
     border:0;
     color: #fff;
 }
-#main .container .solution .col-md-3{
+/******************产品在线**********/
+#main .inline ul.show{
+    margin:60px auto;
+    margin-top:20px;
+    border-top:1px solid #ddd;
+    border-left:1px solid #ddd;
+    width:1301px;
+}
+#main .inline ul li{
+    float: left;
+    width:260px;
+    height:370px;
+    border-bottom:1px solid #ddd;
+    border-right:1px solid #ddd;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+#main .inline ul li.active{
+    width:520px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    border-left:1px solid #f8b600;
+    border-right:1px solid #f8b600;
+}
+#main .inline ul li {
+    padding:0;
+}
+#main .inline ul li{
+    text-align: left;
+    border-left:1px solid #ddd;
+    padding:0 20px;
+}
+#main .inline ul li>div>div:first-child{
+    width:218px;
+    float: left;
+}
+#main .inline ul li>div>div:nth-child(2){
+    float: right;
+    width: 236px;
+    text-align: left;
+    border-left:1px solid #ddd;
+    padding:0 20px;
+    display: none;
+}
+#main .inline ul li.active>div>div:nth-child(2){
+    display: block;
+}
+#main .inline ul li.active {
+    margin-bottom: 15px;
+}
+#main .inline ul li>div{
     overflow: hidden;
 }
+#main .inline ul li>div>div:nth-child(2) h5,#main .inline ul li>div>div:nth-child(2) p{
+    margin:4px 0;
+    text-align: left;
+    font-size: 14px;
+}
+#main .inline ul li p,#main .inline ul li h3{
+    text-align: center;
+}
+#main .inline ul li>p{
+    margin:25px 0;
+}
+#main .inline ul li p{
+    color:#888;
+    margin-top:30px;
+}
+#main .inline ul li p:last-child{
+    margin:0;
+}
+#main .inline ul.show li span{
+    display: block;
+    height:88px;
+    width:88px;
+    background: url(../img/20132248iqr5.png);
+    margin:40px auto;
+}
+#main .inline ul.show li:nth-child(2) span{
+    background: url(../img/20132310dsi6.png);
+}
+#main .inline ul.show li:nth-child(3) span{
+    background: url(../img/201323231evc.png);
+}
+#main .inline ul.show li:nth-child(4) span{
+    background: url(../img/2013225999az.png);
+}
+#main .inline ul.show li button{
+    width:120px;
+    height:37px;
+    background: #f8b600;
+    color: #fff;
+    font-size: 14px;
+    margin: 10px 0;
+    opacity: 0;
+}
+#main .inline ul.show li.active button{
+    opacity:1;
+}
+#main .inline ul li h3{
+    color:#222;
+}
+/*************产品在线结束*************/
+#main .container .show .col-md-3{
+    overflow: hidden;
+    margin-bottom: 20px;
+}
 #main .container .row img{
-    width: 100%;
     position: relative;
     top:0px;
     transition: top 0.3s;
+    width: 100%;
 }
-#main .container .row span{
+#main .solution .show span{
     position:absolute ;
     bottom: 0;
     background: rgba(0,0,0,0.8);
@@ -202,7 +342,7 @@ a{
 	border-bottom-right-radius:5px;
     display: none;
 }
-#main .container .row img:hover{
+#main .solution .show img:hover{
     position: relative;
     top:-20px;
 }
@@ -211,7 +351,7 @@ a{
     width: 300px;
     height:60px;
     font-size: 20px;
-    background: #fff;
+    background: transparent;
     border:2px solid #f8b600;
     color:#f8b600;
 }
@@ -219,3 +359,161 @@ a{
     background: #f8b600;
     color:#fff;
 }
+#main .container .solution{
+    width:100%;
+    background: #f5f5f5;
+    margin:0;
+}
+#main .container .pinzhi{
+    width: 100%;
+    position: relative;
+}
+#main .pinzhi p,#main .pinzhi ul{
+    position: absolute;
+    border: 0;
+    top:40%;
+    width:100%;
+    text-align: center;
+    font-size: 22px;
+    color:#fff;
+}
+#main .pinzhi ul.row{
+    top:60%;
+    width: 60%;
+    left:20%;
+
+}
+#main .pinzhi li{
+    float:left;
+}
+#main .pinzhi li span:first-child{
+    font-size: 45px;
+    float: left;
+    font-weight: bold;
+}
+#main .pinzhi li span:last-child{
+    font-size: 16px;
+    text-align: left;
+    float: left;
+    padding-top:8px;
+    padding-left:5px;
+}
+#main .custom{
+    position: relative;
+}
+#main .custom .slide{
+    overflow: hidden;
+}
+#main .custom ul{
+    overflow: hidden;
+    width:1805px;
+    margin-top:10px;
+    position: relative;
+    left:0;
+    height:76px;
+}
+#main .custom li{
+    float: left;
+    padding-top:15px;
+}
+#main .custom li.active{
+    padding: 0;
+}
+#main .custom .slide img{
+    opacity: 0.5;
+    width: 100%;
+}
+#main .custom .slide li.active img{
+    opacity: 1;
+}
+#main .custom span{
+    position: absolute;
+    width:19px;
+    height:36px;
+    top:30%;
+    margin-top:-18px;
+    background: url(../img/24171539i0g0.png);
+    cursor: pointer;
+}
+#main .custom span.left{
+    left:-50px;
+}
+#main .custom span.right{
+    background: url(../img/24171525ijxl.png);
+    right:-50px;
+}
+#main .custom .content{
+    height:154px;
+    width:811px;
+    margin: 0 auto;
+    background: url(../img/221727521wz9.jpg);
+}
+#main .custom .content div{
+    opacity: 0;
+    display: none;
+}
+#main .custom .content div.active{
+    padding:55px;
+    font-family: "黑体";
+    font-size: 17px;
+    text-align: center;
+    color:#888;
+    opacity: 1;
+    display: block;
+}
+#footer{
+    height:410px;
+    width:100%;
+    background: url(../img/footer.jpg);
+    color: #fff;
+}
+#footer div{
+    padding:50px 30px 20px 30px;
+}
+#footer p:first-child{
+    font-size: 18px;
+}
+#footer p.line{
+    border-bottom:1px solid #ddd;
+    position: relative;
+}
+#footer h2{
+    line-height: 60px;
+    font-size: 35px;
+}
+#footer h1{
+    font-size: 40px;
+    margin:20px 0;
+}
+#footer p.line span{
+    position:absolute;
+    left:0;
+    width:20%;
+    height:3px;
+    top:-1.5px;
+    background:#f8b600;
+}
+#footer span a{
+    color: #fff;
+    font-size: 13px;
+}
+#footer span a:hover{
+    color:#f8b600;
+    text-decoration: none;
+}
+#footer p:last-child{
+    line-height: 30px;
+    font-size: 13px;
+}
+#footer div.rt button{
+    background: transparent;
+    color: #fff;
+}
+#footer div.rt button:hover{
+    background: #f8b600;
+}
+#footer div.rt img{
+    padding:10px 5px;
+    width:150px;
+}
+
