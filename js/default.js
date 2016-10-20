@@ -132,7 +132,6 @@ setInterval(function(){
 },500);
 $("#main .inline ul.show li").mouseover(function(e){
     var target= e.target;
-
     if(!$(this).hasClass('active')&&target.nodeName=="LI"){
         var len=$("#main .inline ul.show li.current").length;
         if(len==0){
